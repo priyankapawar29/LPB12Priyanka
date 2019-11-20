@@ -12,6 +12,9 @@ public class LoginPOM {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
+	//below 2 line code is equivalent to driver.findElement(By.classname="fa-user")
+	//@FindBy(className= "fa-user")
+	//private WebElement user_icon;
 	
 	@FindBy(id="login")
 	private WebElement userName; 

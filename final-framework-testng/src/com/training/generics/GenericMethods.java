@@ -3,6 +3,7 @@ package com.training.generics;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -76,9 +77,25 @@ public class GenericMethods {
 		return getElementsAsList(locator, type).size()>0;
 	}
 	
+		
 	// this method gives true only where there is an single entry 
 	// in the DOM 
 	public boolean checkSingleEntry(String locator, String type){
 		return getElementsAsList(locator, type).size() ==1;
 	}
+	
+	//This method click the given Webelement
+	public static void click(WebElement element) {
+		((WebElement) element).click();
+	}
+	
+	//This method type in given webelement
+	public static void type(WebElement element, String stringtotype) {
+		((WebElement) element).sendKeys(stringtotype);
+	}
+	
+	//This method scrolls down on webpage
+//	JavascriptExecutor js = ((JavascriptExecutor) driver);
+//	js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	
 }
