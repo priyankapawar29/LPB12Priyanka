@@ -14,14 +14,11 @@ public class GmailPOM {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
-	//below 2 line code is equivalent to driver.findElement(By.classname="fa-user")
-	//@FindBy(className= "fa-user")
-	//private WebElement user_icon;
-	
+		
 	@FindBy(className="BHzsHc")
 	public WebElement useanotheracc;
 	
-	@FindBy(xpath="//input[@name='identifier']")                 //(id="identifierId")
+	@FindBy(xpath="//input[@name='identifier']")               
 	public WebElement gmailid;
 	
 	@FindBy(xpath="//span[@class='RveJvd snByac'])")
@@ -33,5 +30,20 @@ public class GmailPOM {
 	@FindBy(xpath="//*[@class='zF']")
 	public List<WebElement> unreademails;
 	
+	public void clickanotheracc() {
+		this.useanotheracc.click(); 
+	}
 	
+	public void sendUserName(String userName) {
+		this.gmailid.clear();
+		this.gmailid.sendKeys(userName);
+	}
+	
+	public void sendPassword(String password) {
+		this.password.clear(); 
+		this.password.sendKeys(password); 
+	}
+	public void clicknextbtn() {
+		this.nextbtn.click(); 
+	}
 }

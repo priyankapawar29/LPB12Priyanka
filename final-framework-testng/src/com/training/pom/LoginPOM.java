@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Reporter;
 
 public class LoginPOM {
 	private WebDriver driver; 
@@ -12,22 +13,44 @@ public class LoginPOM {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
-	//below 2 line code is equivalent to driver.findElement(By.classname="fa-user")
-	//@FindBy(className= "fa-user")
-	//private WebElement user_icon;
 	
-	@FindBy(id="login")
-	private WebElement userName; 
+	@FindBy(className= "sign-in")
+	private WebElement user_icon;
 	
-	@FindBy(id="password")
-	private WebElement password;
+	@FindBy(id="user_login")
+	public WebElement username;
 	
-	@FindBy(id="formLogin_submitAuth")
-	private WebElement loginBtn; 
+	@FindBy(id="user_pass")
+	public WebElement password;
+	
+	@FindBy(name="login")
+	public WebElement loginbtn;
+	
+	//@FindBy(linkText=" Lost Your Password?")
+	@FindBy(xpath="//a[contains(.,' Lost Your Password?')]")
+	public WebElement forgetpassword;
+	
+	@FindBy(className="sub-nav-title")
+	public WebElement manageacc;
+	
+	@FindBy(xpath="//input[@class='lostpassword-button']")
+	public WebElement resetpwd;
+	
+//	@FindBy(id="login")
+//	private WebElement userName; 
+//	
+//	@FindBy(id="password")
+//	private WebElement password;
+//	
+//	@FindBy(id="formLogin_submitAuth")
+//	private WebElement loginBtn; 
+	public void clickusericon() {
+		this.user_icon.click(); 
+	}
 	
 	public void sendUserName(String userName) {
-		this.userName.clear();
-		this.userName.sendKeys(userName);
+		this.username.clear();
+		this.username.sendKeys(userName);
 	}
 	
 	public void sendPassword(String password) {
@@ -36,6 +59,24 @@ public class LoginPOM {
 	}
 	
 	public void clickLoginBtn() {
-		this.loginBtn.click(); 
+		this.loginbtn.click(); 
+	}
+	
+	public void checkmanageacc() {
+		boolean visible = this.manageacc.isDisplayed();
+		if (visible==true) {
+				Reporter.log("Logged in successfully.");
+			}
+			else{
+				Reporter.log("Not logged in.");
+				}
+		}
+	
+	public void clicklostpwd() {
+		this.forgetpassword.click(); 
+	}
+	
+	public void clickresetpwd() {
+		this.resetpwd.click(); 
 	}
 }

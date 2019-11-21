@@ -8,6 +8,7 @@ import java.util.Set;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -17,8 +18,7 @@ import com.training.generics.GenericMethods;
 import com.training.generics.ScreenShot;
 import com.training.pom.GmailPOM;
 import com.training.pom.LoginPOM;
-import com.training.pom.MainPagePOM;
-import com.training.pom.MyProfilePagePOM;
+import com.training.pom.RegisterPOM;
 //import com.training.pom.properties;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
@@ -27,9 +27,9 @@ public class RealestateRegisterTests {
 
 	private WebDriver driver;
 	private String baseUrl;
-	private MainPagePOM mainPage;
 	private GmailPOM gmailPage;
-	private MyProfilePagePOM myProfilepage;
+	private LoginPOM loginPage;
+	private RegisterPOM registerpage;
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private String gmailurl;
@@ -44,9 +44,10 @@ public class RealestateRegisterTests {
 	@BeforeMethod
 	public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
-		mainPage = new MainPagePOM(driver); 
-		myProfilepage = new MyProfilePagePOM(driver);
+		registerpage = new RegisterPOM(driver);
+		loginPage = new LoginPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
+		gmailPage = new GmailPOM(driver);
 		gmailurl = properties.getProperty("gmail");
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
@@ -60,52 +61,38 @@ public class RealestateRegisterTests {
 	}
 
 	
-	@Test(enabled=true,priority=1)
+	@Test(enabled=false,priority=1)
  	public void RETC_001() {
-		GenericMethods.click(mainPage.user_icon);
-		GenericMethods.click(myProfilepage.RegisterTab);
-		GenericMethods.type(myProfilepage.Email, properties.getProperty("newuser"));
-		GenericMethods.type(myProfilepage.FirstName, properties.getProperty("firstname"));
-		GenericMethods.type(myProfilepage.LastName, properties.getProperty("lastname"));
-		GenericMethods.click(myProfilepage.Registerbtn);
-		screenShot.captureScreenShot("screenshots/Registeruser1");
-		try {
-			myProfilepage.verifymsg();
-		}
-		catch(NoSuchElementException e)
-		{
-			System.out.println("Error is "+ e);
-		}
 		
-		screenShot.captureScreenShot("screenshots/Registeruser2");
-				
+		registerpage.clickusericon();
+		registerpage.clickRegistertab();
+		registerpage.sendEmail(properties.getProperty("newuser"));
+		registerpage.sendfirstName(properties.getProperty("firstname"));
+		registerpage.sendlastName(properties.getProperty("lastname"));
+		registerpage.clickRegisterBtn();
+		screenShot.captureScreenShot("screenshots/Registeruser1");
+		registerpage.verifymsg();
+	
 	}	
 	
-	@Test(enabled=true,priority=2)
+	@Test(enabled=false,priority=2)
 	public void RETC_002() {
-		//optimized code
-		GenericMethods.click(mainPage.user_icon);
-		GenericMethods.type(myProfilepage.username, properties.getProperty("userID"));
-		GenericMethods.type(myProfilepage.password, properties.getProperty("password"));
+		
+		loginPage.clickusericon();
+		loginPage.sendUserName(properties.getProperty("userID"));
+		loginPage.sendPassword(properties.getProperty("password"));
+		loginPage.clickLoginBtn();
 		screenShot.captureScreenShot("screenshots/Login1");
-		GenericMethods.click(myProfilepage.loginbtn);
+		loginPage.checkmanageacc();
 		screenShot.captureScreenShot("screenshots/Login2");
-		try {
-		myProfilepage.checkmanageacc();
-		}
-		catch (NoSuchElementException e)
-		{
-			System.out.println("Error is "+ e);
-		}
-		       
 	}
 
 	@Test(enabled=true,priority=3)
 	public void RECT_003() {
-		GenericMethods.click(mainPage.user_icon);
-		GenericMethods.click(myProfilepage.forgetpassword);
-		GenericMethods.type(myProfilepage.username, properties.getProperty("userID"));
-		GenericMethods.click(myProfilepage.resetpwd);
+		loginPage.clickusericon();
+		loginPage.clicklostpwd();
+		loginPage.sendUserName(properties.getProperty("userID"));
+		loginPage.clickresetpwd();
 		driver.get(gmailurl); 
 		Set<String> winids= driver.getWindowHandles();
 		for(String winid:winids)
@@ -118,22 +105,22 @@ public class RealestateRegisterTests {
 				break;
 			}
 		}
-		
-		//GenericMethods.click(gmailPage.useanotheracc);
-		GenericMethods.type(gmailPage.gmailid, properties.getProperty("guserid"));
-		GenericMethods.click(gmailPage.nextbtn);
-		GenericMethods.type(gmailPage.password, properties.getProperty("gpwd"));
-		GenericMethods.click(gmailPage.nextbtn);
+		//gmailPage.clickanotheracc();
+		gmailPage.sendUserName(properties.getProperty("guserid"));
+		gmailPage.clicknextbtn();
+		gmailPage.sendPassword(properties.getProperty("gpwd"));
+		gmailPage.clicknextbtn();
 		// below code for checking email received
 		for(int i=0;i<gmailPage.unreademails.size();i++){
 		    if(gmailPage.unreademails.get(i).isDisplayed()==true){
 		        // now verify if we received email form a specific mailer.
 		         if(gmailPage.unreademails.get(i).getText().equals(properties.getProperty("mailerid"))){
-		            System.out.println("Email recieved form " + properties.getProperty("mailerid"));
+		            Reporter.log("Email recieved form " + properties.getProperty("mailerid"));
 		            break;
 		        }
 		         else{
-		            System.out.println("No Email form " + properties.getProperty("mailerid"));
+		           Reporter.log("No Email form " + properties.getProperty("mailerid"));
+		           
 		        }
 		    }
 		

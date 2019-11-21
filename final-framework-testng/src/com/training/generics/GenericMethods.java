@@ -84,18 +84,6 @@ public class GenericMethods {
 		return getElementsAsList(locator, type).size() ==1;
 	}
 	
-	//This method click the given Webelement
-	public static void click(WebElement element) {
-		((WebElement) element).click();
-	}
-	
-	//This method type in given webelement
-	public static void type(WebElement element, String stringtotype) {
-		((WebElement) element).sendKeys(stringtotype);
-	}
-	
-	//This method scrolls down on webpage
-//	JavascriptExecutor js = ((JavascriptExecutor) driver);
-//	js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
 	
 }
