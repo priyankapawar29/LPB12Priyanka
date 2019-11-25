@@ -52,6 +52,7 @@ public class RealestateRegisterTests {
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
+		Reporter.log("Url is open.");
 	}
 	
 	@AfterMethod
@@ -75,7 +76,7 @@ public class RealestateRegisterTests {
 	
 	}	
 	
-	@Test(enabled=false,priority=2)
+	@Test(enabled=true,priority=2)
 	public void RETC_002() {
 		
 		loginPage.clickusericon();
@@ -87,7 +88,7 @@ public class RealestateRegisterTests {
 		screenShot.captureScreenShot("screenshots/Login2");
 	}
 
-	@Test(enabled=true,priority=3)
+	@Test(enabled=false,priority=3)
 	public void RECT_003() {
 		loginPage.clickusericon();
 		loginPage.clicklostpwd();
@@ -110,22 +111,10 @@ public class RealestateRegisterTests {
 		gmailPage.clicknextbtn();
 		gmailPage.sendPassword(properties.getProperty("gpwd"));
 		gmailPage.clicknextbtn();
-		// below code for checking email received
-		for(int i=0;i<gmailPage.unreademails.size();i++){
-		    if(gmailPage.unreademails.get(i).isDisplayed()==true){
-		        // now verify if we received email form a specific mailer.
-		         if(gmailPage.unreademails.get(i).getText().equals(properties.getProperty("mailerid"))){
-		            Reporter.log("Email recieved form " + properties.getProperty("mailerid"));
-		            break;
-		        }
-		         else{
-		           Reporter.log("No Email form " + properties.getProperty("mailerid"));
-		           
-		        }
-		    }
-		
-	}
-			
-	
+		gmailPage.checkemailreceived();
+//		For steps below webelements are not available to locate, so below is just logic that can be used.
+//		gmailPage.sendPassword(properties.getProperty("password"));
+//		gmailPage.resendPassword(properties.getProperty("password"));	
+//		loginPage.clickresetpwd();
 	}
 }

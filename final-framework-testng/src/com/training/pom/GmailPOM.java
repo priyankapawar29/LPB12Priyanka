@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Reporter;
 
 public class GmailPOM {
 	private WebDriver driver; 
@@ -45,5 +46,22 @@ public class GmailPOM {
 	}
 	public void clicknextbtn() {
 		this.nextbtn.click(); 
+	}
+	// below code for checking email received
+	public void checkemailreceived() {
+		for(int i=0;i<unreademails.size();i++){
+		    if(unreademails.get(i).isDisplayed()==true){
+		        // now verify if we received email form a specific mailer.
+		         if(unreademails.get(i).getText().equals("mailerid")){
+		            Reporter.log("Email recieved form " + "mailerid");
+		            break;
+		        }
+		         else{
+		           Reporter.log("No Email form " + "mailerid");
+		           
+		        }
+		    }
+		
+	}
 	}
 }

@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.Reporter;
 
 public class LoginPOM {
@@ -78,5 +79,11 @@ public class LoginPOM {
 	
 	public void clickresetpwd() {
 		this.resetpwd.click(); 
+	}
+	
+	public void verifyadminlogin() {
+		String title = driver.getTitle();
+		Assert.assertEquals(title,"Dashboard ‹ Real Estate — WordPress");
+		Reporter.log("Admin dashboard page is open.");
 	}
 }

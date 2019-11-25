@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Medium test Suite]">
+  <test name="Medium test(failed)">
     <classes>
       <class name="com.training.sanity.tests.RealestateMediumTests">
         <methods>
@@ -13,5 +13,5 @@
         </methods>
       </class> <!-- com.training.sanity.tests.RealestateMediumTests -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Medium test(failed) -->
+</suite> <!-- Failed suite [Medium test Suite] -->

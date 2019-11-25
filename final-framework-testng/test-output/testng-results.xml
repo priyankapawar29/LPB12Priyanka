@@ -1,145 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" ignored="2" total="3" passed="0">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[Url is open.]]>
+    </line>
+    <line>
+      <![CDATA[Admin dashboard page is open.]]>
+    </line>
+    <line>
+      <![CDATA[Admin logged in successfully,]]>
+    </line>
+    <line>
+      <![CDATA[All Properties page is open.]]>
+    </line>
+    <line>
+      <![CDATA[/nAdd New Button is available.]]>
+    </line>
+    <line>
+      <![CDATA[/nAdd new property page is open.]]>
+    </line>
+    <line>
+      <![CDATA[/nEntered credentials in Enter title textbox should are displayed.]]>
+    </line>
+    <line>
+      <![CDATA[/nEntered credentials in textbox should are displayed.]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="310860" started-at="2019-11-21T11:58:48Z" finished-at="2019-11-21T12:03:59Z">
+  <suite name="Default suite" duration-ms="39622" started-at="2019-11-25T08:26:13Z" finished-at="2019-11-25T08:26:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="310860" started-at="2019-11-21T11:58:48Z" finished-at="2019-11-21T12:03:59Z">
-      <class name="com.training.sanity.tests.RealestateRegisterTests">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.RealestateRegisterTests@5c7fa833]" name="setUpBeforeClass" is-config="true" duration-ms="10" started-at="2019-11-21T17:28:48Z" finished-at="2019-11-21T17:28:48Z">
+    <test name="Default test" duration-ms="39622" started-at="2019-11-25T08:26:13Z" finished-at="2019-11-25T08:26:52Z">
+      <class name="com.training.sanity.tests.RealestateMediumTests">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.RealestateMediumTests@5c7fa833]" name="setUpBeforeClass" is-config="true" duration-ms="11" started-at="2019-11-25T13:56:13Z" finished-at="2019-11-25T13:56:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.training.sanity.tests.RealestateRegisterTests@5c7fa833]" name="setUp" is-config="true" duration-ms="310795" started-at="2019-11-21T17:28:48Z" finished-at="2019-11-21T17:33:59Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[timeout
-  (Session info: chrome=78.0.3904.108)
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'DESKTOP-LC06BTB', ip: '9.199.36.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\PRIYAN~1\AppData\Local\Temp\scoped_dir10104_1739693192}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:60818}, acceptInsecureCerts=false, browserVersion=78.0.3904.108, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
-Session ID: fa9aada852f8f23c6f8c269534b7f389]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: timeout
-  (Session info: chrome=78.0.3904.108)
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'DESKTOP-LC06BTB', ip: '9.199.36.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\PRIYAN~1\AppData\Local\Temp\scoped_dir10104_1739693192}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:60818}, acceptInsecureCerts=false, browserVersion=78.0.3904.108, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
-Session ID: fa9aada852f8f23c6f8c269534b7f389
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
-	at com.training.sanity.tests.RealestateRegisterTests.setUp(RealestateRegisterTests.java:54)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method status="PASS" signature="aasetUp()[pri:0, instance:com.training.sanity.tests.RealestateMediumTests@5c7fa833]" name="aasetUp" is-config="true" duration-ms="16247" started-at="2019-11-25T13:56:13Z" finished-at="2019-11-25T13:56:29Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Url is open.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- aasetUp -->
+        <test-method status="PASS" signature="adminLogin()[pri:0, instance:com.training.sanity.tests.RealestateMediumTests@5c7fa833]" name="adminLogin" is-config="true" duration-ms="7434" started-at="2019-11-25T13:56:29Z" finished-at="2019-11-25T13:56:37Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Admin dashboard page is open.]]>
+            </line>
+            <line>
+              <![CDATA[Admin logged in successfully,]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- adminLogin -->
+        <test-method status="PASS" signature="RETC_031()[pri:1, instance:com.training.sanity.tests.RealestateMediumTests@5c7fa833]" name="RETC_031" duration-ms="14045" started-at="2019-11-25T13:56:37Z" finished-at="2019-11-25T13:56:51Z">
+          <reporter-output>
+            <line>
+              <![CDATA[All Properties page is open.]]>
+            </line>
+            <line>
+              <![CDATA[/nAdd New Button is available.]]>
+            </line>
+            <line>
+              <![CDATA[/nAdd new property page is open.]]>
+            </line>
+            <line>
+              <![CDATA[/nEntered credentials in Enter title textbox should are displayed.]]>
+            </line>
+            <line>
+              <![CDATA[/nEntered credentials in textbox should are displayed.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- RETC_031 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.RealestateMediumTests@5c7fa833]" name="tearDown" is-config="true" duration-ms="1861" started-at="2019-11-25T13:56:51Z" finished-at="2019-11-25T13:56:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="RECT_003()[pri:3, instance:com.training.sanity.tests.RealestateRegisterTests@5c7fa833]" name="RECT_003" duration-ms="0" started-at="2019-11-21T17:33:59Z" finished-at="2019-11-21T17:33:59Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[timeout
-  (Session info: chrome=78.0.3904.108)
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'DESKTOP-LC06BTB', ip: '9.199.36.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\PRIYAN~1\AppData\Local\Temp\scoped_dir10104_1739693192}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:60818}, acceptInsecureCerts=false, browserVersion=78.0.3904.108, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
-Session ID: fa9aada852f8f23c6f8c269534b7f389]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: timeout
-  (Session info: chrome=78.0.3904.108)
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'DESKTOP-LC06BTB', ip: '9.199.36.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\PRIYAN~1\AppData\Local\Temp\scoped_dir10104_1739693192}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:60818}, acceptInsecureCerts=false, browserVersion=78.0.3904.108, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
-Session ID: fa9aada852f8f23c6f8c269534b7f389
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
-	at com.training.sanity.tests.RealestateRegisterTests.setUp(RealestateRegisterTests.java:54)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RECT_003 -->
-      </class> <!-- com.training.sanity.tests.RealestateRegisterTests -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.training.sanity.tests.RealestateMediumTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
