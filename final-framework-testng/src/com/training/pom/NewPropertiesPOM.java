@@ -40,6 +40,15 @@ private WebDriver driver;
 	@FindBy(className="word-count")
 	private WebElement wordcount;
 	
+	@FindBy(id="publish")
+	private WebElement publish;
+	
+//	@FindBy(className="wp-heading-inline")
+//	private WebElement editpropertyheading;
+	
+	@FindBy(linkText="View post")
+	private WebElement viewpost;
+	
 	public void clickproperties() {
 		
 		try {
@@ -79,8 +88,12 @@ private WebDriver driver;
 		try {
 			this.entertitle.sendKeys("new launch");
 			this.texttab.click();
-			this.titleinlink.isDisplayed();
-			Reporter.log("Entered credentials in Enter title textbox should are displayed.");
+			if(this.titleinlink.isDisplayed()) {
+			Reporter.log("Entered credentials in Enter title textbox are displayed.");
+			}
+			else {
+				Reporter.log("Bug: Entered credentials in Enter title textbox are displayed.");
+			}
 		}
 		catch(NoSuchElementException e) {
 			Reporter.log("Element not found error is" + e +"." );
@@ -97,13 +110,28 @@ private WebDriver driver;
 		int num = Integer.parseInt(count);
 		if(num==2)
 		{
-			Reporter.log("Entered credentials in textbox should are displayed.");
+			Reporter.log("Entered credentials in textbox are displayed.");
 		}
 		else
 		{
-			Reporter.log("Entered credentials in textbox should are not displayed.");
+			Reporter.log("Bug: Entered credentials in textbox are not displayed.");
 		}
 		}
+		catch(NoSuchElementException e) {
+			Reporter.log("Element not found error is" + e +".");
+		}
+	}
+	
+	public void clickpublish() {
+		try {
+		this.publish.click();
+		if(viewpost.isDisplayed()) {
+			Reporter.log("View Post is visible.");
+		}
+		else {
+			Reporter.log("Bug: View Post is not visible.");
+		}
+	}
 		catch(NoSuchElementException e) {
 			Reporter.log("Element not found error is" + e +".");
 		}

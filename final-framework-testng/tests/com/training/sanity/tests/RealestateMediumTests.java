@@ -87,7 +87,11 @@ public class RealestateMediumTests {
 	}
 
 	@Test(enabled=false,priority=3)
-	public void RECT_033() {
-		
+	public void RECT_033() throws Exception {
+		propertiespom.clickproperties();
+		propertiespom.clickaddnew();
+		propertiespom.sendtitle();
+		propertiespom.sendtotexttab();
+		screenShot.captureScreenShot("screenshots/newproperty");
 	}
 }
