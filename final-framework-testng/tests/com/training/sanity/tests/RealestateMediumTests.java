@@ -70,7 +70,7 @@ public class RealestateMediumTests {
 	}
 
 //	To verify whether application allows admin to add new property with all details	
-	@Test(enabled=true,priority=1)
+	@Test(enabled=false,priority=1)
  	public void RETC_031() throws Exception {
 		propertiespom.clickproperties();
 		propertiespom.clickaddnew();
@@ -86,12 +86,14 @@ public class RealestateMediumTests {
 	
 	}
 
-	@Test(enabled=false,priority=3)
+	@Test(enabled=true,priority=3)
 	public void RECT_033() throws Exception {
 		propertiespom.clickproperties();
 		propertiespom.clickaddnew();
 		propertiespom.sendtitle();
 		propertiespom.sendtotexttab();
-		screenShot.captureScreenShot("screenshots/newproperty");
+		//screenShot.captureScreenShot("screenshots/newproperty");
+		propertiespom.clickpublish();
+		propertiespom.clickallproperties();
 	}
 }

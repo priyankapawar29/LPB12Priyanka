@@ -1,5 +1,8 @@
 package com.training.pom;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -7,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -48,6 +52,9 @@ private WebDriver driver;
 	
 	@FindBy(linkText="View post")
 	private WebElement viewpost;
+	
+	@FindBy(linkText="All Properties")
+	private WebElement allproperties;
 	
 	public void clickproperties() {
 		
@@ -136,4 +143,27 @@ private WebDriver driver;
 			Reporter.log("Element not found error is" + e +".");
 		}
 	}
+	
+	public void clickallproperties() {
+		try {
+		this.allproperties.click();
+//		Select norows = new Select(driver.findElement(By.xpath("//tbody[@id='the-list']/tr/td")));
+//		norows.selectByValue("25");
+		
+		List<WebElement> rows = driver.findElements(By.xpath("//tbody[@id='the-list']/tr/td"));
+		for(WebElement row:rows)
+		{
+			System.out.println(row.getText()); // gives all data in a row.
+			// Below line code to get data from columns
+//			System.out.println(row.findElements(By.tagName("td")).get(1).getText() + " = " + (row.findElements(By.tagName("td")).get(5).getText()) );
+//			dvr.findElement(By.linkText("Next")).click();
+		}
+		
+		
+	}
+		catch(NoSuchElementException e) {
+			Reporter.log("Element not found error is" + e +".");
+		}
+	}
 }
+	
