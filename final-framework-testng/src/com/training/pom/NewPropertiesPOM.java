@@ -147,16 +147,21 @@ private WebDriver driver;
 	public void clickallproperties() {
 		try {
 		this.allproperties.click();
-//		Select norows = new Select(driver.findElement(By.xpath("//tbody[@id='the-list']/tr/td")));
-//		norows.selectByValue("25");
-		
+
 		List<WebElement> rows = driver.findElements(By.xpath("//tbody[@id='the-list']/tr/td"));
 		for(WebElement row:rows)
 		{
-			System.out.println(row.getText()); // gives all data in a row.
-			// Below line code to get data from columns
-//			System.out.println(row.findElements(By.tagName("td")).get(1).getText() + " = " + (row.findElements(By.tagName("td")).get(5).getText()) );
-//			dvr.findElement(By.linkText("Next")).click();
+//			System.out.println(row.getText()); // gives all data in a row.
+//          Below line code to get data from columns
+//	        System.out.println(row.findElements(By.tagName("td")).get(1).getText());
+			String firstentry= row.findElements(By.tagName("td")).get(1).getText();
+			if (firstentry=="new launch") {
+				Reporter.log("Added property is displayed");
+			}
+			else {
+				Reporter.log("Added property is not displayed");
+			}
+			
 		}
 		
 		

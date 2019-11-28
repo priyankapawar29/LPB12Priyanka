@@ -1,5 +1,6 @@
 package com.training.pom;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -67,14 +68,18 @@ private WebDriver driver;
 	}
 	
 	public void verifymsg() {
-		String msg = SuccessNotification.getText();
+		
 		String expmsg= "You have successfully registered to Real Estate. We have emailed your password to the email address you entered.";
 		try
 		{
+			String msg = SuccessNotification.getText();
 			Assert.assertEquals(msg,expmsg);
 		}
 		catch(AssertionError e){
-			Reporter.log("Assertion error:  "+ e);
+			Reporter.log("Test Failed.. Assertion error:  "+ e);
+		}
+		catch(NoSuchElementException e) {
+			Reporter.log("Test Failed.. Element not found error:  "+ e);
 		}
 		
 	}
