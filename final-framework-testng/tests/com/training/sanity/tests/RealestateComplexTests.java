@@ -34,6 +34,7 @@ public class RealestateComplexTests {
 	private static Properties properties;
 	private ScreenShot screenShot;
 	private String gmailurl;
+	private DBSelectuser dbselectuser;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException {
@@ -51,6 +52,7 @@ public class RealestateComplexTests {
 		gmailPage = new GmailPOM(driver);
 		gmailurl = properties.getProperty("gmail");
 		screenShot = new ScreenShot(driver); 
+		dbselectuser = new DBSelectuser();
 		// open the browser 
 		driver.get(baseUrl);
 		Reporter.log("Url is open.");
@@ -62,8 +64,8 @@ public class RealestateComplexTests {
 		driver.quit();
 	}
 
-	
-	@Test(enabled=true,priority=1,dataProvider="excel-inputs",dataProviderClass = LoginDataProviders.class)
+//  To verify whether application allows multiple users to get registered upon entering valid credentials	
+	@Test(enabled=false,priority=1,dataProvider="excel-inputs",dataProviderClass = LoginDataProviders.class)
  	public void RETC_061(String Email, String FirstName, String LastName) {
 		
 		registerpage.clickusericon();
@@ -71,51 +73,40 @@ public class RealestateComplexTests {
 		registerpage.sendEmail(Email);
 		registerpage.sendfirstName(FirstName);
 		registerpage.sendlastName(LastName);
+		screenShot.captureScreenShot("screenshots/ComplexRegisteruser1");
 		registerpage.clickRegisterBtn();
-		screenShot.captureScreenShot("screenshots/Registeruser1");
+		screenShot.captureScreenShot("screenshots/ComplexRegisteruser2");
 		registerpage.verifymsg();
 	
 	}	
-	
+//  To verify whether details entered by user during registration get displayed in database	
 	@Test(enabled=false,priority=2)
-	public void RETC_002() {
+	public void RETC_062() {
 		
-		loginPage.clickusericon();
-		loginPage.sendUserName(properties.getProperty("userID"));
-		loginPage.sendPassword(properties.getProperty("password"));
-		loginPage.clickLoginBtn();
-		screenShot.captureScreenShot("screenshots/Login1");
-		loginPage.checkmanageacc();
-		screenShot.captureScreenShot("screenshots/Login2");
+		registerpage.clickusericon();
+		registerpage.clickRegistertab();
+		registerpage.sendEmail(properties.getProperty("userID1"));
+		registerpage.sendfirstName(properties.getProperty("firstname"));
+		registerpage.sendlastName(properties.getProperty("lastname"));
+		screenShot.captureScreenShot("screenshots/Complexretc_062_1");
+		registerpage.clickRegisterBtn();
+		registerpage.verifymsg();
+		screenShot.captureScreenShot("screenshots/Complexretc_062_2");
+		dbselectuser.checkuser(properties.getProperty("firstname"));
 	}
 
-	@Test(enabled=false,priority=3)
-	public void RECT_003() {
-		loginPage.clickusericon();
-		loginPage.clicklostpwd();
-		loginPage.sendUserName(properties.getProperty("userID"));
-		loginPage.clickresetpwd();
-		driver.get(gmailurl); 
-		Set<String> winids= driver.getWindowHandles();
-		for(String winid:winids)
-		{
-			driver.switchTo().window(winid);
-			String title = driver.getTitle();
-			if (title.toLowerCase().contains("gmail"))
-			{	
-				//System.out.println(title);
-				break;
-			}
-		}
-		//gmailPage.clickanotheracc();
-		gmailPage.sendUserName(properties.getProperty("guserid"));
-		gmailPage.clicknextbtn();
-		gmailPage.sendPassword(properties.getProperty("gpwd"));
-		gmailPage.clicknextbtn();
-		gmailPage.checkemailreceived();
-//		For steps below webelements are not available to locate, so below is just logic that can be used.
-//		gmailPage.sendPassword(properties.getProperty("password"));
-//		gmailPage.resendPassword(properties.getProperty("password"));	
-//		loginPage.clickresetpwd();
-	}
+	@Test(enabled=true,priority=1,dataProvider="excel-inputs1",dataProviderClass = LoginDataProviders.class)
+ 	public void RETC_063(String Email, String FirstName, String LastName) {
+		
+		registerpage.clickusericon();
+		registerpage.clickRegistertab();
+		registerpage.sendEmail(Email);
+		registerpage.sendfirstName(FirstName);
+		registerpage.sendlastName(LastName);
+		screenShot.captureScreenShot("screenshots/ComplexRegisteruser3");
+		registerpage.clickRegisterBtn();
+		screenShot.captureScreenShot("screenshots/ComplexRegisteruser4");
+		registerpage.verifymsg();
+	
+	}	
 }

@@ -42,25 +42,30 @@ private WebDriver driver;
 	
 	public void clickusericon() {
 		this.user_icon.click(); 
+		Reporter.log("Login screen is displayed.");
 	}
 	
 	public void clickRegistertab() {
 		this.RegisterTab.click(); 
+		Reporter.log("Register screen is displayed.");
 	}
 	
 	public void sendEmail(String email) {
 		this.Email.clear();
 		this.Email.sendKeys(email);
+		Reporter.log("Email is entered");
 	}
 	
 	public void sendfirstName(String firstName) {
 		this.FirstName.clear();
 		this.FirstName.sendKeys(firstName);
+		Reporter.log("First name is entered");
 	}
 	
 	public void sendlastName(String lastName) {
 		this.LastName.clear();
 		this.LastName.sendKeys(lastName);
+		Reporter.log("Last name is entered");
 	}
 	
 	public void clickRegisterBtn() {
