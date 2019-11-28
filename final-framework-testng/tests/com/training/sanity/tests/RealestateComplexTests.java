@@ -65,7 +65,7 @@ public class RealestateComplexTests {
 	}
 
 //  To verify whether application allows multiple users to get registered upon entering valid credentials	
-	@Test(enabled=false,priority=1,dataProvider="excel-inputs",dataProviderClass = LoginDataProviders.class)
+	@Test(enabled=true,priority=1,dataProvider="excel-inputs",dataProviderClass = LoginDataProviders.class)
  	public void RETC_061(String Email, String FirstName, String LastName) {
 		
 		registerpage.clickusericon();
@@ -80,7 +80,7 @@ public class RealestateComplexTests {
 	
 	}	
 //  To verify whether details entered by user during registration get displayed in database	
-	@Test(enabled=false,priority=2)
+	@Test(enabled=true,priority=2)
 	public void RETC_062() {
 		
 		registerpage.clickusericon();

@@ -62,7 +62,7 @@ public class RealestateRegisterTests {
 	}
 
 	
-	@Test(enabled=false,priority=1)
+	@Test(enabled=true,priority=1)
  	public void RETC_001() {
 		
 		registerpage.clickusericon();
@@ -88,7 +88,7 @@ public class RealestateRegisterTests {
 		screenShot.captureScreenShot("screenshots/Login2");
 	}
 
-	@Test(enabled=false,priority=3)
+	@Test(enabled=true,priority=3)
 	public void RECT_003() {
 		loginPage.clickusericon();
 		loginPage.clicklostpwd();

@@ -4,7 +4,7 @@
 <suite name = "Medium test Suite">
    <test name = "Medium test">
       <classes>
-         <class name = "com.training.sanity.tests.RealestateComplexTests" />
+         <class name = "com.training.sanity.tests.RealestateMediumTests" />
       </classes>
    </test>
 </suite>	

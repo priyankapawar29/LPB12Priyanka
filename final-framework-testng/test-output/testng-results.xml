@@ -1,278 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="5" passed="3">
+<testng-results skipped="0" failed="1" ignored="2" total="3" passed="0">
   <reporter-output>
     <line>
       <![CDATA[Url is open.]]>
     </line>
     <line>
-      <![CDATA[Login screen is displayed.]]>
+      <![CDATA[Admin dashboard page is open.]]>
     </line>
     <line>
-      <![CDATA[Register screen is displayed.]]>
-    </line>
-    <line>
-      <![CDATA[Email is entered]]>
-    </line>
-    <line>
-      <![CDATA[First name is entered]]>
-    </line>
-    <line>
-      <![CDATA[Last name is entered]]>
-    </line>
-    <line>
-      <![CDATA[Test Failed.. Element not found error:  org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='notification success closeable']"}
-  (Session info: chrome=78.0.3904.108)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'DESKTOP-LC06BTB', ip: '9.199.41.156', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\PRIYAN~1\AppData\Local\Temp\scoped_dir12568_2053120833}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:52751}, acceptInsecureCerts=false, browserVersion=78.0.3904.108, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
-Session ID: e4d3714ede9b2bf7b5c7a08ff6b6788e
-*** Element info: {Using=xpath, value=//div[@class='notification success closeable']}]]>
-    </line>
-    <line>
-      <![CDATA[Url is open.]]>
-    </line>
-    <line>
-      <![CDATA[Login screen is displayed.]]>
-    </line>
-    <line>
-      <![CDATA[Register screen is displayed.]]>
-    </line>
-    <line>
-      <![CDATA[Email is entered]]>
-    </line>
-    <line>
-      <![CDATA[First name is entered]]>
-    </line>
-    <line>
-      <![CDATA[Last name is entered]]>
-    </line>
-    <line>
-      <![CDATA[Test Failed.. Element not found error:  org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='notification success closeable']"}
-  (Session info: chrome=78.0.3904.108)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'DESKTOP-LC06BTB', ip: '9.199.41.156', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\PRIYAN~1\AppData\Local\Temp\scoped_dir5016_1682456915}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53101}, acceptInsecureCerts=false, browserVersion=78.0.3904.108, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
-Session ID: 2e50f6300766ebf86964a53a3aff9a3a
-*** Element info: {Using=xpath, value=//div[@class='notification success closeable']}]]>
-    </line>
-    <line>
-      <![CDATA[Url is open.]]>
-    </line>
-    <line>
-      <![CDATA[Login screen is displayed.]]>
-    </line>
-    <line>
-      <![CDATA[Register screen is displayed.]]>
-    </line>
-    <line>
-      <![CDATA[Email is entered]]>
-    </line>
-    <line>
-      <![CDATA[First name is entered]]>
-    </line>
-    <line>
-      <![CDATA[Last name is entered]]>
-    </line>
-    <line>
-      <![CDATA[Test Failed.. Element not found error:  org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='notification success closeable']"}
-  (Session info: chrome=78.0.3904.108)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'DESKTOP-LC06BTB', ip: '9.199.41.156', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\PRIYAN~1\AppData\Local\Temp\scoped_dir2652_199802482}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53346}, acceptInsecureCerts=false, browserVersion=78.0.3904.108, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
-Session ID: 3567cfdeb13041f09cb86326a8436161
-*** Element info: {Using=xpath, value=//div[@class='notification success closeable']}]]>
+      <![CDATA[Admin logged in successfully,]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="474509" started-at="2019-11-28T10:43:12Z" finished-at="2019-11-28T10:51:07Z">
+  <suite name="Medium test Suite" duration-ms="250941" started-at="2019-11-28T14:18:20Z" finished-at="2019-11-28T14:22:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="474509" started-at="2019-11-28T10:43:12Z" finished-at="2019-11-28T10:51:07Z">
-      <class name="com.training.sanity.tests.RealestateComplexTests">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.RealestateComplexTests@39aeed2f]" name="setUpBeforeClass" is-config="true" duration-ms="22" started-at="2019-11-28T16:13:12Z" finished-at="2019-11-28T16:13:12Z">
+    <test name="Medium test" duration-ms="250941" started-at="2019-11-28T14:18:20Z" finished-at="2019-11-28T14:22:31Z">
+      <class name="com.training.sanity.tests.RealestateMediumTests">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.RealestateMediumTests@5c7fa833]" name="setUpBeforeClass" is-config="true" duration-ms="22" started-at="2019-11-28T19:48:20Z" finished-at="2019-11-28T19:48:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.RealestateComplexTests@39aeed2f]" name="setUp" is-config="true" duration-ms="149729" started-at="2019-11-28T16:13:13Z" finished-at="2019-11-28T16:15:43Z">
+        <test-method status="PASS" signature="aasetUp()[pri:0, instance:com.training.sanity.tests.RealestateMediumTests@5c7fa833]" name="aasetUp" is-config="true" duration-ms="202884" started-at="2019-11-28T19:48:20Z" finished-at="2019-11-28T19:51:42Z">
           <reporter-output>
             <line>
               <![CDATA[Url is open.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="RETC_063(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.training.sanity.tests.RealestateComplexTests@39aeed2f]" name="RETC_063" duration-ms="47113" started-at="2019-11-28T16:15:43Z" data-provider="excel-inputs1" finished-at="2019-11-28T16:16:30Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[manzoor]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[manzoor mehadi]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[manzoor mehadi]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- aasetUp -->
+        <test-method status="PASS" signature="adminLogin()[pri:0, instance:com.training.sanity.tests.RealestateMediumTests@5c7fa833]" name="adminLogin" is-config="true" duration-ms="16156" started-at="2019-11-28T19:51:42Z" finished-at="2019-11-28T19:51:59Z">
           <reporter-output>
             <line>
-              <![CDATA[Login screen is displayed.]]>
+              <![CDATA[Admin dashboard page is open.]]>
             </line>
             <line>
-              <![CDATA[Register screen is displayed.]]>
-            </line>
-            <line>
-              <![CDATA[Email is entered]]>
-            </line>
-            <line>
-              <![CDATA[First name is entered]]>
-            </line>
-            <line>
-              <![CDATA[Last name is entered]]>
-            </line>
-            <line>
-              <![CDATA[Test Failed.. Element not found error:  org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='notification success closeable']"}
-  (Session info: chrome=78.0.3904.108)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'DESKTOP-LC06BTB', ip: '9.199.41.156', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\PRIYAN~1\AppData\Local\Temp\scoped_dir12568_2053120833}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:52751}, acceptInsecureCerts=false, browserVersion=78.0.3904.108, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
-Session ID: e4d3714ede9b2bf7b5c7a08ff6b6788e
-*** Element info: {Using=xpath, value=//div[@class='notification success closeable']}]]>
+              <![CDATA[Admin logged in successfully,]]>
             </line>
           </reporter-output>
-        </test-method> <!-- RETC_063 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.RealestateComplexTests@39aeed2f]" name="tearDown" is-config="true" duration-ms="1923" started-at="2019-11-28T16:16:30Z" finished-at="2019-11-28T16:16:32Z">
+        </test-method> <!-- adminLogin -->
+        <test-method status="FAIL" signature="RETC_032()[pri:2, instance:com.training.sanity.tests.RealestateMediumTests@5c7fa833]" name="RETC_032" duration-ms="30134" started-at="2019-11-28T19:51:59Z" finished-at="2019-11-28T19:52:29Z">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=78.0.3904.108)
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'DESKTOP-LC06BTB', ip: '192.168.8.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\PRIYAN~1\AppData\Local\Temp\scoped_dir14520_952650576}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:64402}, acceptInsecureCerts=false, browserVersion=78.0.3904.108, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
+Session ID: 709523da87640951564c7353494977fa]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=78.0.3904.108)
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'DESKTOP-LC06BTB', ip: '192.168.8.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\PRIYAN~1\AppData\Local\Temp\scoped_dir14520_952650576}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:64402}, acceptInsecureCerts=false, browserVersion=78.0.3904.108, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
+Session ID: 709523da87640951564c7353494977fa
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy10.click(Unknown Source)
+	at com.training.pom.NewLaunchPOM.clickrealestateicon(NewLaunchPOM.java:70)
+	at com.training.sanity.tests.RealestateMediumTests.RETC_032(RealestateMediumTests.java:88)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RETC_032 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.RealestateMediumTests@5c7fa833]" name="tearDown" is-config="true" duration-ms="1730" started-at="2019-11-28T19:52:29Z" finished-at="2019-11-28T19:52:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.RealestateComplexTests@39aeed2f]" name="setUp" is-config="true" duration-ms="93986" started-at="2019-11-28T16:16:32Z" finished-at="2019-11-28T16:18:06Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Url is open.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="RETC_063(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.training.sanity.tests.RealestateComplexTests@39aeed2f]" name="RETC_063" duration-ms="40251" started-at="2019-11-28T16:18:06Z" data-provider="excel-inputs1" finished-at="2019-11-28T16:18:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[alex@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[76576.0]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[alex hales]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Login screen is displayed.]]>
-            </line>
-            <line>
-              <![CDATA[Register screen is displayed.]]>
-            </line>
-            <line>
-              <![CDATA[Email is entered]]>
-            </line>
-            <line>
-              <![CDATA[First name is entered]]>
-            </line>
-            <line>
-              <![CDATA[Last name is entered]]>
-            </line>
-            <line>
-              <![CDATA[Test Failed.. Element not found error:  org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='notification success closeable']"}
-  (Session info: chrome=78.0.3904.108)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'DESKTOP-LC06BTB', ip: '9.199.41.156', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\PRIYAN~1\AppData\Local\Temp\scoped_dir5016_1682456915}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53101}, acceptInsecureCerts=false, browserVersion=78.0.3904.108, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
-Session ID: 2e50f6300766ebf86964a53a3aff9a3a
-*** Element info: {Using=xpath, value=//div[@class='notification success closeable']}]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- RETC_063 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.RealestateComplexTests@39aeed2f]" name="tearDown" is-config="true" duration-ms="2143" started-at="2019-11-28T16:18:46Z" finished-at="2019-11-28T16:18:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.RealestateComplexTests@39aeed2f]" name="setUp" is-config="true" duration-ms="78940" started-at="2019-11-28T16:18:48Z" finished-at="2019-11-28T16:20:07Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Url is open.]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="RETC_063(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.training.sanity.tests.RealestateComplexTests@39aeed2f]" name="RETC_063" duration-ms="56988" started-at="2019-11-28T16:20:07Z" data-provider="excel-inputs1" finished-at="2019-11-28T16:21:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[mariya@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[mariya]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[876876.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Login screen is displayed.]]>
-            </line>
-            <line>
-              <![CDATA[Register screen is displayed.]]>
-            </line>
-            <line>
-              <![CDATA[Email is entered]]>
-            </line>
-            <line>
-              <![CDATA[First name is entered]]>
-            </line>
-            <line>
-              <![CDATA[Last name is entered]]>
-            </line>
-            <line>
-              <![CDATA[Test Failed.. Element not found error:  org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='notification success closeable']"}
-  (Session info: chrome=78.0.3904.108)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'DESKTOP-LC06BTB', ip: '9.199.41.156', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\PRIYAN~1\AppData\Local\Temp\scoped_dir2652_199802482}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53346}, acceptInsecureCerts=false, browserVersion=78.0.3904.108, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
-Session ID: 3567cfdeb13041f09cb86326a8436161
-*** Element info: {Using=xpath, value=//div[@class='notification success closeable']}]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- RETC_063 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.RealestateComplexTests@39aeed2f]" name="tearDown" is-config="true" duration-ms="2354" started-at="2019-11-28T16:21:04Z" finished-at="2019-11-28T16:21:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.RealestateComplexTests -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.training.sanity.tests.RealestateMediumTests -->
+    </test> <!-- Medium test -->
+  </suite> <!-- Medium test Suite -->
 </testng-results>

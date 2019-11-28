@@ -18,6 +18,7 @@ import com.training.generics.GenericMethods;
 import com.training.generics.ScreenShot;
 import com.training.pom.GmailPOM;
 import com.training.pom.LoginPOM;
+import com.training.pom.NewLaunchPOM;
 import com.training.pom.NewPropertiesPOM;
 import com.training.pom.RegisterPOM;
 //import com.training.pom.properties;
@@ -32,6 +33,7 @@ public class RealestateMediumTests {
 	private NewPropertiesPOM propertiespom;
 	private static Properties properties;
 	private ScreenShot screenShot;
+	private NewLaunchPOM newlaunchpage;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException {
@@ -46,6 +48,7 @@ public class RealestateMediumTests {
 		propertiespom = new NewPropertiesPOM(driver);
 		loginPage = new LoginPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
+		newlaunchpage = new NewLaunchPOM(driver);
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
 		driver.get(baseUrl);
@@ -80,13 +83,24 @@ public class RealestateMediumTests {
 		
 	}	
 	
-	@Test(enabled=false,priority=2)
+	@Test(enabled=true,priority=2)
 	public void RETC_032() {
-		
-	
+		newlaunchpage.clickrealestateicon();
+		newlaunchpage.clicknullamapartment();
+		newlaunchpage.clicknext();
+		newlaunchpage.sendname("selenium");
+		newlaunchpage.sendemail("selenium@gmail.com");
+		newlaunchpage.sendsubject("apartment");
+		newlaunchpage.sendmessage("looking for apartment");
+		newlaunchpage.clicksend();
+		newlaunchpage.sendamount("40000");
+		newlaunchpage.senddownpayment("2000");
+		newlaunchpage.sendloanterm("2");
+		newlaunchpage.sendinterestrate("5");
+		newlaunchpage.clickcalculate();
 	}
 
-	@Test(enabled=true,priority=3)
+	@Test(enabled=false,priority=3)
 	public void RECT_033() throws Exception {
 		propertiespom.clickproperties();
 		propertiespom.clickaddnew();

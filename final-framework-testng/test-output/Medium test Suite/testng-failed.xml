@@ -7,9 +7,9 @@
         <methods>
           <include name="adminLogin"/>
           <include name="tearDown"/>
-          <include name="RECT_033"/>
           <include name="aasetUp"/>
           <include name="setUpBeforeClass"/>
+          <include name="RETC_032"/>
         </methods>
       </class> <!-- com.training.sanity.tests.RealestateMediumTests -->
     </classes>
