@@ -75,9 +75,10 @@ private WebDriver driver;
 		
 	}
 	
-	public void clickaddnew() {
+	public void clickaddnew() throws Exception {
 		try {
 		this.addnew.click(); 
+		Thread.sleep(5000);
 		String title = driver.getTitle();
 		Assert.assertEquals(title,"Add Property ‹ Real Estate — WordPress");
 		Reporter.log("Add new property page is open.");
@@ -87,7 +88,7 @@ private WebDriver driver;
 			Reporter.log("Assertion error is" + e +"."  );
 		}
 		catch(NoSuchElementException e) {
-			Reporter.log("Element not found error is" + e +"." );
+			Reporter.log("Bug Found: Element not found error is" + e +"." );
 		}
 	}
 	

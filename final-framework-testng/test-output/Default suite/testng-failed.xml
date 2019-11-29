@@ -3,14 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.RealestateComplexTests">
+      <class name="com.training.sanity.tests.RealestateMediumTests">
         <methods>
+          <include name="adminLogin"/>
           <include name="tearDown"/>
-          <include name="setUp"/>
+          <include name="aasetUp"/>
           <include name="setUpBeforeClass"/>
-          <include name="RETC_063"/>
+          <include name="RETC_032"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.RealestateComplexTests -->
+      </class> <!-- com.training.sanity.tests.RealestateMediumTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

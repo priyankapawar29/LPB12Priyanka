@@ -36,22 +36,23 @@ public class DBSelectuser {
             
         }
     } catch (SQLException e) {
-        e.printStackTrace();
+    	Reporter.log("Bug Found: ");
+    	e.printStackTrace();
     }
  
     for(LoginBean lb:list)
     {
-          if (lb.getUserName()==Username)
+          if (lb.getUserName().equals(Username))
           {
-        	  System.out.println(lb.getUserName());
-        	  System.out.println(lb.getPassword());
+//        	  System.out.println(lb.getUserName());
+//        	  System.out.println(lb.getPassword());
         	  Reporter.log("User is added to database");
           }
           else {
-        	  System.out.println(Username);
-        	  System.out.println(lb.getUserName());
-        	  System.out.println(lb.getPassword());
-        	  Reporter.log("User is not added to database");
+//        	  System.out.println(Username);
+//        	  System.out.println(lb.getUserName());
+//        	  System.out.println(lb.getPassword());
+        	  Reporter.log("Bug Found: User is not added to database");
           }
         
     }
